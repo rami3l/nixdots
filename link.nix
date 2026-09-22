@@ -21,7 +21,9 @@
     };
   };
   confDirs = map linkDir [
+    "bat"
     "proxychains"
+    "zellij"
   ];
 in {
   xdg.configFile = mergeAttrsList (confFiles ++ confDirs);
