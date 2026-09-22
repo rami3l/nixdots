@@ -4,6 +4,8 @@
   homeDirectory,
   ...
 }: {
+  imports = [./link.nix];
+
   home = {
     inherit username homeDirectory;
 
