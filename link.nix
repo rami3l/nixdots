@@ -19,12 +19,13 @@
   link = name: mkOutOfStoreSymlink "${symlinkRoot}/${name}";
 
   linkFile = name: {${name}.source = link name;};
-  confFiles = map linkFile (
-    []
-    ++ optionals (isSystem "darwin") [
+  homeCfgFiles = map linkFile [
+    ".proxychains/proxychains.conf"
+  ];
+  xdgCfgFiles = map linkFile (
+    optionals (isSystem "darwin") [
       "karabiner/karabiner.json"
     ]
-    ++ optionals (isSystem "linux") []
   );
 
   linkDir = name: {
@@ -33,17 +34,17 @@
       recursive = true;
     };
   };
-  confDirs = map linkDir (
+  homeCfgDirs = map linkDir [];
+  xdgCfgDirs = map linkDir (
     [
       "bat"
-      "proxychains"
       "zellij"
     ]
     ++ optionals (isSystem "darwin") [
       "paneru"
     ]
-    ++ optionals (isSystem "linux") []
   );
 in {
-  xdg.configFile = mergeAttrsList (confFiles ++ confDirs);
+  home.file = mergeAttrsList (homeCfgFiles ++ homeCfgDirs);
+  xdg.configFile = mergeAttrsList (xdgCfgFiles ++ xdgCfgDirs);
 }
