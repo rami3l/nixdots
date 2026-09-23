@@ -20,6 +20,8 @@
 
   linkFile = name: {${name}.source = link name;};
   homeCfgFiles = map linkFile [
+    ".gitignore"
+    ".haskeline"
     ".proxychains/proxychains.conf"
   ];
   xdgCfgFiles = map linkFile (
