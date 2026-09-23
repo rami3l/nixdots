@@ -23,7 +23,10 @@
     ".proxychains/proxychains.conf"
   ];
   xdgCfgFiles = map linkFile (
-    optionals (isSystem "darwin") [
+    [
+      "jj/config.toml"
+    ]
+    ++ optionals (isSystem "darwin") [
       "karabiner/karabiner.json"
     ]
   );
