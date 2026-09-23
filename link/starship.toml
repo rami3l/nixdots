@@ -1,0 +1,76 @@
+# Print a new line at the start of the prompt
+add_newline = false
+
+[username]
+format = "[$user]($style) "
+show_always = true
+style_root = "red"
+style_user = "yellow"
+
+[hostname]
+ssh_only = false
+style = "green"
+format = "on [$hostname]($style) "
+
+[directory]
+# truncate_to_repo = false
+format = "in [$path]($style)[$read_only]($read_only_style) "
+
+[character]
+success_symbol = "[>](bold green)"
+vimcmd_symbol = "[<](bold green)"
+vimcmd_replace_one_symbol = "[<](bold purple)"
+vimcmd_replace_symbol = "[<](bold purple)"
+vimcmd_visual_symbol = "[v](bold yellow)"
+error_symbol = "[>](bold bright-red)"
+
+[time]
+# disabled = false
+format = "%H:%M"
+utc_time_offset = "local"
+style = "yellow"
+
+[cmake]
+symbol = "▲ "
+
+[golang]
+symbol = "GO "
+style = "bold italic cyan"
+
+[julia]
+symbol = "∴  "
+
+[kotlin]
+symbol = "𝕂 "
+
+[nodejs]
+symbol = "node "
+
+[scala]
+symbol = "𝕊 "
+
+[custom.fish_private]
+when = 'test -n "$FISH_PRIVATE_MODE"'
+symbol = "privately "
+style = "italic purple"
+
+# [custom.jj]
+# when = "jj-starship detect"
+# shell = ["jj-starship"]
+# format = "[$output]($style) "
+
+[custom.jj]
+symbol = " "
+when = "jj-starship detect"
+style = "bold purple"
+format = "on [$symbol$output]($style) "
+shell = ["jj-starship", "--no-color", "--no-jj-prefix", "--no-git-prefix"]
+
+[git_branch]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_status]
+disabled = true

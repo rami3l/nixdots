@@ -25,8 +25,10 @@
   xdgCfgFiles = map linkFile (
     [
       "jj/config.toml"
+      "starship.toml"
     ]
     ++ optionals (isSystem "darwin") [
+      "Brewfile"
       "karabiner/karabiner.json"
     ]
   );
