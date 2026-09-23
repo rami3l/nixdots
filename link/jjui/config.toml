@@ -1,0 +1,103 @@
+# See also <https://github.com/idursun/jjui/blob/main/internal/config/default/bindings.toml>.
+
+[ui.theme]
+light = "base16-rose-pine-dawn"
+dark = "base24-ayu-mirage"
+
+# Rearrange revisions in the revisions view.
+
+[[actions]]
+name = "revisions.arrange"
+lua = "jj_interactive('arrange'); jj(revisions.refresh())"
+
+[[bindings]]
+action = "revisions.arrange"
+key = "shift+o"
+scope = "revisions"
+
+# Quit/Cancel actions.
+
+[[bindings]]
+action = "ui.quit"
+key = "q"
+scope = "revisions"
+
+[[bindings]]
+action = "ui.cancel"
+key = "q"
+scope = "ui"
+
+[[bindings]]
+action = "ui.quit"
+key = "q"
+scope = "revisions"
+
+[[bindings]]
+action = "revisions.details.cancel"
+key = "q"
+scope = "revisions.details"
+
+[[bindings]]
+action = "revisions.evolog.cancel"
+key = "q"
+scope = "revisions.evolog"
+
+# Move up and down.
+
+[[bindings]]
+action = "revisions.page_down"
+key = "ctrl+d"
+scope = "revisions"
+
+[[bindings]]
+action = "revisions.page_up"
+key = "ctrl+u"
+scope = "revisions"
+
+[[bindings]]
+action = "revisions.target_picker.move_down"
+key = "ctrl+j"
+scope = "revisions.target_picker"
+desc = "down"
+
+[[bindings]]
+action = "revisions.target_picker.move_up"
+key = "ctrl+k"
+scope = "revisions.target_picker"
+desc = "up"
+
+[[bindings]]
+action = "revset.move_down"
+key = "ctrl+j"
+scope = "revset"
+desc = "down"
+
+[[bindings]]
+action = "revset.move_up"
+key = "ctrl+k"
+scope = "revset"
+desc = "up"
+
+[[bindings]]
+action = "status.input.move_down"
+key = "ctrl+j"
+scope = "status.input"
+desc = "down"
+
+[[bindings]]
+action = "status.input.move_up"
+key = "ctrl+k"
+scope = "status.input"
+desc = "up"
+
+[[bindings]]
+action = "file_search.move_down"
+key = "ctrl+j"
+scope = "file_search"
+desc = "down"
+
+[[bindings]]
+action = "file_search.move_up"
+key = "ctrl+k"
+scope = "file_search"
+desc = "up"

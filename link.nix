@@ -38,6 +38,8 @@
   xdgCfgDirs = map linkDir (
     [
       "bat"
+      "fastfetch"
+      "jjui"
       "zellij"
     ]
     ++ optionals (isSystem "darwin") [
