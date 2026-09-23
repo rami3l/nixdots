@@ -13,6 +13,7 @@
 
     packages = with pkgs; [
       deadnix
+      nixd
       statix
     ];
   };

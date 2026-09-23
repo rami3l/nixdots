@@ -5,11 +5,10 @@
   system,
   ...
 }: let
-  inherit (builtins) match;
   inherit (config.lib.file) mkOutOfStoreSymlink;
-  inherit (lib) map mergeAttrsList optionals;
+  inherit (lib) mergeAttrsList optionals;
 
-  isSystem = sys: match ".*-${sys}" system != null;
+  isSystem = sys: builtins.match ".*-${sys}" system != null;
 
   # NOTE: This is explicitly set to the absolute path of the base directory in
   # its string form; using paths will result in links to generated sources in
