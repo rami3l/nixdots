@@ -48,7 +48,6 @@
   xdgCfgDirs = map linkDir (
     [
       "bat"
-      "fastfetch"
       "ghostty"
       "jjui"
       "zellij"
