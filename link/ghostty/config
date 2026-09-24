@@ -1,0 +1,34 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+# See: https://github.com/ghostty-org/ghostty/blob/main/src/config/Config.zig
+
+theme = light:Rose Pine Dawn,dark:Ayu Mirage
+
+adjust-cursor-thickness = "140%"
+
+# Ligatures  <- -> <= => != /= /\ :: [| |] {| |} /* */ #[ #{ !== >>= <<= >=> |>> <<| </>
+# Chinese    君不見黃河之水天上來奔流到海不復回
+
+font-thicken = true
+font-thicken-strength = 112
+
+font-family = "UDEV Gothic NFLG"
+font-size = 15
+
+# font-family = "Iosevka Term"
+# font-feature = "+ss05"
+# font-size = 15
+
+# Fallback for NF Symbols
+font-family = "Symbols Nerd Font"
+
+custom-shader = ./shaders/cursor_sweep.glsl
+# This should be the last since it changes the global coordinates.
+# custom-shader = ./shaders/bettercrt.glsl
+
+window-padding-x = 1
+window-padding-y = 0
+window-padding-color = extend
+
+macos-icon = "custom"
+macos-custom-icon = "~/.config/ghostty/kitty.app.png"
+macos-option-as-alt = left

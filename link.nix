@@ -49,6 +49,7 @@
     [
       "bat"
       "fastfetch"
+      "ghostty"
       "jjui"
       "zellij"
     ]
