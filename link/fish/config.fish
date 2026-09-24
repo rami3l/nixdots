@@ -1,4 +1,7 @@
 # Fish ::<>
+set -l platform_os (uname -s | string lower)
+# set -l platform_arch (uname -m | string lower)
+
 set -g fish_greeting ""
 
 if status is-interactive
@@ -14,15 +17,24 @@ end
 set -gx DO_NOT_TRACK 1
 
 # Homebrew
-# set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-if test (uname -m) = arm64
-    eval (/opt/homebrew/bin/brew shellenv)
-else
-    eval (/usr/local/bin/brew shellenv)
+set -l brew
+for path in /opt/homebrew/bin/brew /usr/local/bin/brew /home/linuxbrew/.linuxbrew/bin/brew
+    if test -x $path
+        set brew $path
+        break
+    end
 end
-set -gx HOMEBREW_NO_ANALYTICS 1
-set -gx HOMEBREW_NO_AUTO_UPDATE 1
-set -gx HOMEBREW_BUNDLE_FILE $HOME/.config/Brewfile
+
+if test -n "$brew"
+    # set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+    eval ($brew shellenv)
+    set -gx HOMEBREW_NO_ANALYTICS 1
+    set -gx HOMEBREW_NO_AUTO_UPDATE 1
+    set -gx HOMEBREW_BUNDLE_FILE $HOME/.config/Brewfile
+end
+
+# Nix
+fish_add_path -gm $HOME/.nix-profile/bin
 
 # Abbreviations and aliases
 if status is-interactive
@@ -85,10 +97,12 @@ end
 
 # Neovim
 set -gx EDITOR nvim
-fish_add_path -ga $HOME/.local/share/nvim/mason/bin
+fish_add_path -gam $HOME/.local/share/nvim/mason/bin
 
 # Bitwarden SSH Agent
-set -gx SSH_AUTH_SOCK $HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+if test $platform_os = darwin
+    set -gx SSH_AUTH_SOCK $HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+end
 
 # Bat
 set -gx BAT_THEME base16-256
@@ -96,36 +110,31 @@ set -gx MANPAGER less
 
 # Haskell
 set -gx GHCUP_USE_XDG_DIRS 1
-fish_add_path -ga $HOME/.local/bin
+fish_add_path -gam $HOME/.local/bin
 
 # Rust
 set -gx RUSTUP_AUTO_INSTALL 0
-fish_add_path -ga (brew --prefix rustup)/libexec/bin
-fish_add_path -ga $HOME/.cargo/bin
+test -n "$brew" && fish_add_path -gam (brew --prefix rustup)/libexec/bin
+fish_add_path -gam $HOME/.cargo/bin
 
 # Go
 set -gx GOPATH $HOME/.go
-set -gx GOROOT (brew --prefix golang)/libexec
-fish_add_path -ga $GOPATH/bin
-fish_add_path -ga $GOROOT/bin
+fish_add_path -gam $GOPATH/bin
+fish_add_path -gam $GOROOT/bin
 
 # Java
-set -gx JAVA_HOME (/usr/libexec/java_home)
+if test $platform_os = darwin
+    set -gx JAVA_HOME (/usr/libexec/java_home)
+end
 
 # pnpm
-set -gx PNPM_HOME $HOME/Library/pnpm
-fish_add_path -ga $PNPM_HOME
-
-# Nix
-fish_add_path -ga $HOME/.nix-profile/bin
+if test $platform_os = darwin
+    set -gx PNPM_HOME $HOME/Library/pnpm
+    fish_add_path -gam $PNPM_HOME
+end
 
 # LibreSSL
-fish_add_path -ga (brew --prefix libressl)/bin
-
-# VSCode
-# if status is-interactive
-#     string match -q "$TERM_PROGRAM" vscode && source (code --locate-shell-integration-path fish)
-# end
+test -n "$brew" && fish_add_path -gam (brew --prefix libressl)/bin
 
 # Launch Starship
 # See: <https://github.com/koekeishiya/yabai/issues/267#issuecomment-536159221>
