@@ -57,8 +57,6 @@ brew "cargo-watch"
 brew "zig"
 # Compile Cargo project with zig as linker
 brew "cargo-zigbuild"
-# Manage your dotfiles across multiple diverse machines, securely
-brew "chezmoi"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
