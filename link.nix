@@ -19,6 +19,7 @@
 
   linkFile = name: {${name}.source = link name;};
   homeCfgFiles = map linkFile [
+    ".ssh/config"
     ".gitignore"
     ".haskeline"
     ".proxychains/proxychains.conf"
