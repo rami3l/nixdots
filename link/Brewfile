@@ -105,8 +105,6 @@ brew "glow"
 brew "gnu-sed"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Library access to GnuPG
 brew "gpgme"
 # Open-source build automation tool based on the Groovy and Kotlin DSL

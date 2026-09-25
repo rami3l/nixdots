@@ -7,6 +7,7 @@
   imports = [
     ./link.nix
     ./programs/fastfetch.nix
+    ./programs/go.nix
   ];
 
   home = {

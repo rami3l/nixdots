@@ -120,7 +120,6 @@ fish_add_path -gam $HOME/.cargo/bin
 # Go
 set -gx GOPATH $HOME/.go
 fish_add_path -gam $GOPATH/bin
-fish_add_path -gam $GOROOT/bin
 
 # Java
 if test $platform_os = darwin
