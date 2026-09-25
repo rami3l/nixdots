@@ -50,6 +50,7 @@
     [
       "bat"
       "ghostty"
+      "git"
       "jjui"
       "zellij"
     ]

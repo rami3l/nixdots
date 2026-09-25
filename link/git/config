@@ -1,0 +1,26 @@
+[user]
+  name = rami3l
+  email = rami3l@outlook.com
+  signingkey = 39A0730456190C3A
+[init]
+  defaultBranch = master
+[commit]
+  gpgsign = true
+[core]
+  excludesfile = ~/.gitignore
+  ignorecase = false
+[diff]
+  colorMoved = default
+[merge]
+  conflictStyle = diff3
+[merge "mergiraf"]
+  name = mergiraf
+  driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+[rerere]
+  enabled = true
+[credential]
+  helper = osxkeychain
+  helper = oauth
+[delta]
+  syntax-theme = base16-256
+  keep-plus-minus-markers = true

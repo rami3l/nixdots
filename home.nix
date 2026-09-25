@@ -7,6 +7,7 @@
   imports = [
     ./link.nix
     ./programs/fastfetch.nix
+    ./programs/git.nix
     ./programs/go.nix
   ];
 

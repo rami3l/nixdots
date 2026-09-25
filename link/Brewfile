@@ -97,8 +97,6 @@ brew "git"
 brew "git-absorb"
 # Git credential helper that authenticates in browser using OAuth
 brew "git-credential-oauth"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
 # Render markdown on the CLI
 brew "glow"
 # GNU implementation of the famous stream editor
@@ -119,10 +117,6 @@ brew "hyperfine"
 brew "imagemagick"
 # CLI wrapper for basic network utilities on macOS - ip command
 brew "iproute2mac"
-# Git-compatible distributed version control system
-brew "jj"
-# TUI for interacting with the Jujutsu version control system
-brew "jjui"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -143,8 +137,6 @@ brew "mas"
 brew "maven"
 # Create modern online books from Markdown files
 brew "mdbook"
-# Syntax-aware git merge driver
-brew "mergiraf"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
 # Dependency manager that installs and runs Swift command-line tool packages
@@ -239,8 +231,6 @@ brew "yazi"
 brew "yt-dlp"
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
-# Unified Starship prompt module for Git and Jujutsu repositories
-brew "dmmulroy/tap/jj-starship", trusted: true
 # Makes Time Machine respect .gitignore files
 brew "iohannrabeson/tap/tmignore-rs", trusted: true
 # macOS Input Source Manager
