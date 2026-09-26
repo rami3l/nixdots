@@ -1,12 +1,10 @@
 {
   pkgs,
-  system,
   lib,
+  util,
   ...
 }: let
   inherit (lib) optionals;
-  # TODO: Move this function to a util file so that it can be reused.
-  isSystem = sys: builtins.match ".*-${sys}" system != null;
 in {
   home.packages = with pkgs;
     [
@@ -50,7 +48,7 @@ in {
       yt-dlp
       zellij
     ]
-    ++ optionals (isSystem "darwin") [
+    ++ optionals (util.isSystem "darwin") [
       duti
       iproute2mac
       macism

@@ -1,20 +1,17 @@
 {
   config,
   lib,
-  homeDirectory,
-  system,
+  util,
   ...
 }: let
   inherit (config.lib.file) mkOutOfStoreSymlink;
   inherit (lib) mergeAttrsList optionals;
 
-  isSystem = sys: builtins.match ".*-${sys}" system != null;
-
   # NOTE: This is explicitly set to the absolute path of the base directory in
   # its string form; using paths will result in links to generated sources in
   # the Nix store, which will make the feedback loop much slower and prone to
   # GC-caused breakage.
-  symlinkRoot = "${homeDirectory}/.config/nixdots/link";
+  symlinkRoot = "${util.homeDirectory}/.config/nixdots/link";
   link = name: mkOutOfStoreSymlink "${symlinkRoot}/${name}";
 
   linkFile = name: {${name}.source = link name;};
@@ -34,7 +31,7 @@
       "jj/config.toml"
       "starship.toml"
     ]
-    ++ optionals (isSystem "darwin") [
+    ++ optionals (util.isSystem "darwin") [
       "Brewfile"
       "karabiner/karabiner.json"
     ]
@@ -55,7 +52,7 @@
       "jjui"
       "zellij"
     ]
-    ++ optionals (isSystem "darwin") [
+    ++ optionals (util.isSystem "darwin") [
       "paneru"
     ]
   );

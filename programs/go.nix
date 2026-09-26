@@ -1,6 +1,6 @@
 {
   pkgs,
-  homeDirectory,
+  util,
   ...
 }: {
   home.packages = [
@@ -8,7 +8,7 @@
   ];
 
   programs.go = {
-    env.GOPATH = "${homeDirectory}/.go";
+    env.GOPATH = "${util.homeDirectory}/.go";
 
     telemetry = {
       mode = "off";
