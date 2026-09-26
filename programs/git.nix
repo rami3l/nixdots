@@ -4,8 +4,12 @@
     jujutsu
 
     delta
+    gh
+    git-absorb
+    git-credential-oauth
     jj-starship
     jjui
     mergiraf
+    tea
   ];
 }

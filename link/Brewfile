@@ -83,18 +83,12 @@ brew "ffmpeg"
 brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# GitHub command-line tool
-brew "gh"
 # Installer for the general purpose language Haskell
 brew "ghcup"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
-# Automatic git commit --fixup
-brew "git-absorb"
-# Git credential helper that authenticates in browser using OAuth
-brew "git-credential-oauth"
 # Render markdown on the CLI
 brew "glow"
 # GNU implementation of the famous stream editor
@@ -203,8 +197,6 @@ brew "shellcheck"
 brew "smartmontools"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Command-line tool to interact with Gitea servers
-brew "tea"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
 # Official tldr client written in Rust
