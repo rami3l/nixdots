@@ -8,6 +8,7 @@
     ./programs/nvim.nix
     ./programs/rust.nix
     ./programs/shell.nix
+    ./programs/zig.nix
     ./util.nix
   ];
 

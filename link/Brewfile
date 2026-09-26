@@ -43,10 +43,6 @@ brew "cargo-release"
 brew "cargo-sweep"
 # Watches over your Cargo project's source
 brew "cargo-watch"
-# Programming language designed for robustness, optimality, and clarity
-brew "zig"
-# Compile Cargo project with zig as linker
-brew "cargo-zigbuild"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
