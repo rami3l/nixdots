@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - configuration: linux
+            os: ubuntu-latest
+            target: homeConfigurations.linux.activationPackage
+          - configuration: macos
+            os: macos-latest
+            target: homeConfigurations.macos.activationPackage
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup Nix
+        uses: DeterminateSystems/nix-installer-action@v23
+
+      - name: Build Home Manager activation package
+        run: |
+          nix build ".#${{ matrix.target }}" --no-link --print-build-logs
