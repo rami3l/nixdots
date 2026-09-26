@@ -1,7 +1,6 @@
 tap "brewforge/chinese", trusted: true
 tap "dmmulroy/tap"
 tap "gromgit/fuse", trusted: true
-tap "homebrew-ffmpeg/ffmpeg", trusted: true
 tap "homebrew/services"
 tap "iohannrabeson/tap", "https://github.com/IohannRabeson/homebrew-tap"
 tap "laishulu/homebrew", trusted: true
@@ -11,8 +10,6 @@ tap "nikitabobko/tap", trusted: true
 tap "rami3l/tap", trusted: true
 tap "syhily/git-gc", trusted: true
 tap "thedavidweng/unsigned-tap"
-# Generate compilation database for clang tooling
-brew "bear"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
 # Open-source, cross-platform JavaScript runtime environment
@@ -21,42 +18,20 @@ brew "node"
 brew "bitwarden-cli"
 # Easily generate Instruments traces for your rust crate
 brew "cargo-instruments"
-# Cross-platform make
-brew "cmake"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# Secure runtime for JavaScript and TypeScript
-brew "deno"
 # Isolated development environments using Docker
 brew "docker-compose"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
-# Play, record, convert, and stream select audio and video codecs
-brew "ffmpeg"
-# Installer for the general purpose language Haskell
-brew "ghcup"
-# Interpreter for PostScript and PDF
-brew "ghostscript"
 # Distributed revision control system
 brew "git"
-# GNU implementation of the famous stream editor
-brew "gnu-sed"
-# GNU Privacy Guard (OpenPGP)
-brew "gnupg"
-# Library access to GnuPG
-brew "gpgme"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
-# Modern format for Haskell packages
-brew "hpack"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Development kit for the Java programming language
 brew "openjdk"
 # Build tool for Clojure
 brew "leiningen"
-# Version of the SSL/TLS protocol forked from OpenSSL
-brew "libressl"
 # Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit"
 # Package manager for the Lua programming language
@@ -65,16 +40,8 @@ brew "luarocks"
 brew "maven"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
-# High dynamic-range image file format
-brew "openexr"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
-# Pandoc filter for numbering and cross-referencing
-brew "pandoc-crossref"
 # Sliding, tiling window manager for MacOS
 brew "paneru"
-# Pinentry for GPG on Mac
-brew "pinentry-mac"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Fast, disk space efficient package manager
@@ -85,14 +52,10 @@ brew "podman"
 brew "protobuf"
 # Hook preloader
 brew "proxychains-ng"
-# Advanced Python REPL
-brew "ptpython"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Generic machine emulator and virtualizer
 brew "qemu"
-# SVG rendering tool and library
-brew "resvg"
 # Safe, concurrent, practical language
 brew "rust"
 # Rust toolchain installer

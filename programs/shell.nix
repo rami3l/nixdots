@@ -20,8 +20,11 @@ in {
       entr
       eza
       fd
+      ffmpeg
       fzf
+      ghostscript
       glow
+      gnupg
       htop
       hyperfine
       imagemagick
@@ -32,6 +35,7 @@ in {
       onefetch
       ouch
       parallel
+      resvg
       ripgrep
       rlwrap
       shellcheck
@@ -49,10 +53,19 @@ in {
       zellij
     ]
     ++ optionals (util.isSystem "darwin") [
+      coreutils-prefixed
       duti
       iproute2mac
       macism
       mas
+      pinentry_mac
       terminal-notifier
     ];
+
+  home.file.".gnupg/gpg-agent.conf".text =
+    if util.isSystem "darwin"
+    then ''
+      pinentry-program ${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac
+    ''
+    else "";
 }
