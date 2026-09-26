@@ -9,6 +9,7 @@
     ./programs/git.nix
     ./programs/go.nix
     ./programs/nix.nix
+    ./programs/rust.nix
     ./programs/shell.nix
   ];
 

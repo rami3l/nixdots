@@ -3,6 +3,7 @@
     git
     jujutsu
 
+    bfg-repo-cleaner
     delta
     gh
     git-absorb

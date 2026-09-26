@@ -52,9 +52,8 @@ if status is-interactive
     abbr -g neofetch fastfetch
     abbr -g nnn yazi
     abbr -g obliviate history clear-session
-    abbr -g pacman pacaptr
+    type -q pacman || abbr -g pacman pacaptr
     abbr -g proxychains proxychains4
-    abbr -g sed sd
     abbr -g tcping ting
     abbr -g tmux zellij
     abbr -g vim nvim
