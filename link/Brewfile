@@ -81,8 +81,6 @@ brew "fd"
 brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
-# Command-line fuzzy finder written in Go
-brew "fzf"
 # Installer for the general purpose language Haskell
 brew "ghcup"
 # Interpreter for PostScript and PDF
@@ -195,8 +193,6 @@ brew "sd"
 brew "shellcheck"
 # SMART hard drive monitoring
 brew "smartmontools"
-# Cross-shell prompt for astronauts
-brew "starship"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
 # Official tldr client written in Rust

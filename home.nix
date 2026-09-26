@@ -9,6 +9,7 @@
     ./programs/fastfetch.nix
     ./programs/git.nix
     ./programs/go.nix
+    ./programs/shell.nix
   ];
 
   home = {
