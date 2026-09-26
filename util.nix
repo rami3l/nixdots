@@ -1,13 +1,9 @@
 {
   lib,
-  username,
-  system,
-  homeDirectory,
+  const,
   ...
 }: {
   _module.args.util = {
-    inherit username system homeDirectory;
-
-    isSystem = sys: lib.hasSuffix "-${sys}" system;
+    isSystem = sys: lib.hasSuffix "-${sys}" const.system;
   };
 }

@@ -2,6 +2,7 @@
   config,
   lib,
   util,
+  const,
   ...
 }: let
   inherit (config.lib.file) mkOutOfStoreSymlink;
@@ -11,7 +12,7 @@
   # its string form; using paths will result in links to generated sources in
   # the Nix store, which will make the feedback loop much slower and prone to
   # GC-caused breakage.
-  symlinkRoot = "${util.homeDirectory}/.config/nixdots/link";
+  symlinkRoot = "${const.homeDirectory}/.config/nixdots/link";
   link = name: mkOutOfStoreSymlink "${symlinkRoot}/${name}";
 
   linkFile = name: {${name}.source = link name;};

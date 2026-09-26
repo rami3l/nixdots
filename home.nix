@@ -1,4 +1,4 @@
-{util, ...}: {
+{const, ...}: {
   imports = [
     ./link.nix
     ./programs/fastfetch.nix
@@ -11,7 +11,7 @@
   ];
 
   home = {
-    inherit (util) username homeDirectory;
+    inherit (const) username homeDirectory;
     stateVersion = "26.05";
   };
 

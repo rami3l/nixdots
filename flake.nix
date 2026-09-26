@@ -17,11 +17,13 @@
     mkHome = {
       system,
       homeDirectory,
-    }:
+    }: let
+      const = {inherit username system homeDirectory;};
+    in
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [./home.nix];
-        extraSpecialArgs = {inherit username system homeDirectory;};
+        extraSpecialArgs = {inherit const;};
       };
   in {
     homeConfigurations = {
