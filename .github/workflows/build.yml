@@ -36,3 +36,20 @@ jobs:
       - name: Build Home Manager activation package
         run: |
           nix build ".#${{ matrix.target }}" --no-link --print-build-logs
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup Nix
+        uses: DeterminateSystems/nix-installer-action@v23
+
+      - name: Check formatting
+        run: nix run nixpkgs#alejandra -- --check .
+
+      - name: Run deadnix
+        run: nix run nixpkgs#deadnix -- --fail .
+
+      - name: Run statix
+        run: nix run nixpkgs#statix -- check .
