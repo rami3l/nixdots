@@ -1,5 +1,4 @@
 {
-  pkgs,
   username,
   homeDirectory,
   ...
@@ -9,20 +8,13 @@
     ./programs/fastfetch.nix
     ./programs/git.nix
     ./programs/go.nix
+    ./programs/nix.nix
     ./programs/shell.nix
   ];
 
   home = {
     inherit username homeDirectory;
-
     stateVersion = "26.05";
-
-    packages = with pkgs; [
-      # Nix development
-      deadnix
-      nixd
-      statix
-    ];
   };
 
   nix.gc = {
