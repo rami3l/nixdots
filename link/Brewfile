@@ -89,12 +89,6 @@ brew "luarocks"
 brew "maven"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
-# Incremental parsing library
-brew "tree-sitter"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Control nvim processes using `nvr` command-line tool
-brew "neovim-remote"
 # High dynamic-range image file format
 brew "openexr"
 # 7-Zip (high compression file archiver) implementation
