@@ -39,7 +39,24 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "rustup-src": "rustup-src"
+      }
+    },
+    "rustup-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790347018,
+        "narHash": "sha256-ryy1AxwBtVslRJbDzEMLo4wuYBzxFxMx0Z2Yoem75g8=",
+        "owner": "rust-lang",
+        "repo": "rustup",
+        "rev": "b32adec5ab613c26d7f35e398c8a54f4a46f585b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "repo": "rustup",
+        "type": "github"
       }
     }
   },

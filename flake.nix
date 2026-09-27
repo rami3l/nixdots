@@ -6,10 +6,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    rustup-src = {
+      url = "github:rust-lang/rustup";
+      flake = false;
+    };
   };
   outputs = {
     nixpkgs,
     home-manager,
+    rustup-src,
     ...
   }: let
     username = "rami3l";
@@ -19,9 +25,14 @@
       homeDirectory,
     }: let
       const = {inherit username system homeDirectory;};
+
+      pkgs = nixpkgs.legacyPackages.${system}.extend (final: _prev: {
+        rustup-unstable = final.callPackage ./pkgs/rustup-unstable {inherit rustup-src;};
+      });
     in
       home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
+        inherit pkgs;
+
         modules = [./home.nix];
         extraSpecialArgs = {inherit const;};
       };
