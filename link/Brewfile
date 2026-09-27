@@ -56,10 +56,6 @@ brew "proxychains-ng"
 brew "python@3.10"
 # Generic machine emulator and virtualizer
 brew "qemu"
-# Safe, concurrent, practical language
-brew "rust"
-# Rust toolchain installer
-brew "rustup", args: ["HEAD"]
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Makes Time Machine respect .gitignore files
