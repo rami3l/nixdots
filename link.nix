@@ -26,7 +26,6 @@
     [
       "fish/conf.d/nix.fish"
       "fish/config.fish"
-      "fish/fish_plugins"
       "fish/functions/fish_hybrid_key_bindings.fish"
       "fish/functions/yy.fish"
       "jj/config.toml"

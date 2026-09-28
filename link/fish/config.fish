@@ -65,6 +65,10 @@ function sorry
     history delete -C (history | grep --invert-match sorry | head --lines 1)
 end
 
+function loadenv
+    bass "set -a; source $argv; set +a"
+end
+
 function fish_remove_path
     for path in $argv
         while set -l i (contains -i -- (path normalize $path) $PATH)
