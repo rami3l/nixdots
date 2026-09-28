@@ -1,9 +1,9 @@
 {
   pkgs,
   lib,
-  util,
   ...
 }: let
+  inherit (pkgs) stdenv;
   inherit (lib) optionals;
 in {
   # HACK: Actually, it seems to work great on darwin.
@@ -58,7 +58,7 @@ in {
       yt-dlp
       zellij
     ]
-    ++ optionals (util.isSystem "darwin") [
+    ++ optionals stdenv.hostPlatform.isDarwin [
       coreutils-prefixed
       duti
       iproute2mac

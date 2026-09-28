@@ -24,7 +24,7 @@
       system,
       homeDirectory,
     }: let
-      const = {inherit username system homeDirectory;};
+      const = {inherit username homeDirectory;};
 
       pkgs = nixpkgs.legacyPackages.${system}.extend (final: _prev: {
         rustup-unstable = final.callPackage ./pkgs/rustup-unstable {inherit rustup-src;};

@@ -1,11 +1,12 @@
 {
   config,
+  pkgs,
   lib,
-  util,
   const,
   ...
 }: let
   inherit (config.lib.file) mkOutOfStoreSymlink;
+  inherit (pkgs) stdenv;
   inherit (lib) mergeAttrsList optionals;
 
   # NOTE: This is explicitly set to the absolute path of the base directory in
@@ -31,7 +32,7 @@
       "jj/config.toml"
       "starship.toml"
     ]
-    ++ optionals (util.isSystem "darwin") [
+    ++ optionals stdenv.hostPlatform.isDarwin [
       "Brewfile"
       "karabiner/karabiner.json"
     ]
@@ -52,7 +53,7 @@
       "jjui"
       "zellij"
     ]
-    ++ optionals (util.isSystem "darwin") [
+    ++ optionals stdenv.hostPlatform.isDarwin [
       "paneru"
     ]
   );
