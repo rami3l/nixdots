@@ -24,7 +24,6 @@ in {
       fzf
       ghostscript
       glow
-      gnupg
       htop
       hyperfine
       imagemagick
@@ -58,14 +57,6 @@ in {
       iproute2mac
       macism
       mas
-      pinentry_mac
       terminal-notifier
     ];
-
-  home.file.".gnupg/gpg-agent.conf".text =
-    if util.isSystem "darwin"
-    then ''
-      pinentry-program ${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac
-    ''
-    else "";
 }

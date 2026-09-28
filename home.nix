@@ -3,6 +3,7 @@
     ./link.nix
     ./programs/fastfetch.nix
     ./programs/git.nix
+    ./programs/gnupg.nix
     ./programs/go.nix
     ./programs/nix.nix
     ./programs/nvim.nix
