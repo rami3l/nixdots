@@ -10,13 +10,20 @@ in {
   # See: <https://github.com/NixOS/nixpkgs/blob/7a0f122f5090cf4c2ade2a13a0e229d4e19ba71f/pkgs/shells/fish/plugins/fzf-fish.nix#L69>
   nixpkgs.config.problems.handlers."fzf.fish".broken = "warn";
 
+  programs.fish = {
+    enable = true;
+    shellInit = builtins.readFile ../link/fish/config.fish;
+    plugins = let
+      mkPlugin = name: {
+        inherit name;
+        src = pkgs.fishPlugins.${name}.src;
+      };
+    in
+      map mkPlugin ["bass" "done" "fzf-fish"];
+  };
+
   home.packages = with pkgs;
     [
-      fish
-      fishPlugins.bass
-      fishPlugins.done
-      fishPlugins.fzf-fish
-
       starship
 
       ast-grep

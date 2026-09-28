@@ -26,7 +26,6 @@
   xdgCfgFiles = map linkFile (
     [
       "fish/conf.d/nix.fish"
-      "fish/config.fish"
       "fish/functions/fish_hybrid_key_bindings.fish"
       "fish/functions/yy.fish"
       "jj/config.toml"
