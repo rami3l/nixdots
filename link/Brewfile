@@ -18,8 +18,6 @@ brew "node"
 brew "bitwarden-cli"
 # Easily generate Instruments traces for your rust crate
 brew "cargo-instruments"
-# Functional metaprogramming aware language built on Erlang VM
-brew "elixir"
 # Distributed revision control system
 brew "git"
 # Simple terminal UI for git commands
