@@ -6,6 +6,7 @@
     ./programs/git.nix
     ./programs/gnupg.nix
     ./programs/go.nix
+    ./programs/java.nix
     ./programs/nix.nix
     ./programs/nvim.nix
     ./programs/rust.nix

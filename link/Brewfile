@@ -22,14 +22,8 @@ brew "cargo-instruments"
 brew "elixir"
 # Distributed revision control system
 brew "git"
-# Open-source build automation tool based on the Groovy and Kotlin DSL
-brew "gradle"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Development kit for the Java programming language
-brew "openjdk"
-# Build tool for Clojure
-brew "leiningen"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
 # Sliding, tiling window manager for MacOS
