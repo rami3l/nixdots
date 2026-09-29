@@ -18,8 +18,6 @@ brew "node"
 brew "bitwarden-cli"
 # Easily generate Instruments traces for your rust crate
 brew "cargo-instruments"
-# Isolated development environments using Docker
-brew "docker-compose"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 # Distributed revision control system
@@ -38,8 +36,6 @@ brew "mingw-w64"
 brew "paneru"
 # Fast, disk space efficient package manager
 brew "pnpm"
-# Tool for managing OCI containers and pods
-brew "podman"
 # Hook preloader
 brew "proxychains-ng"
 # Interpreted, interactive, object-oriented programming language

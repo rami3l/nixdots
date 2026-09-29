@@ -1,6 +1,7 @@
 {const, ...}: {
   imports = [
     ./link.nix
+    ./programs/docker.nix
     ./programs/fastfetch.nix
     ./programs/git.nix
     ./programs/gnupg.nix
