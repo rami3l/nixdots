@@ -32,38 +32,24 @@ brew "lazygit"
 brew "openjdk"
 # Build tool for Clojure
 brew "leiningen"
-# Just-In-Time Compiler (JIT) for the Lua programming language
-brew "luajit"
-# Package manager for the Lua programming language
-brew "luarocks"
-# Java-based project management
-brew "maven"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
 # Sliding, tiling window manager for MacOS
 brew "paneru"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Tool for managing OCI containers and pods
 brew "podman"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
 # Hook preloader
 brew "proxychains-ng"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
-# Generic machine emulator and virtualizer
-brew "qemu"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Makes Time Machine respect .gitignore files
 brew "iohannrabeson/tap/tmignore-rs", trusted: true
 # CLI tool to start Linux KVM or macOS HVF VMs using the libkrun
 brew "libkrun/krun/krunkit"
-# Dynamic analysis tools (memory, debug, profiling)
-brew "louisbrunner/valgrind/valgrind", args: ["HEAD"], trusted: true
 # An input source switching daemon for macOS.
 brew "rami3l/tap/clavy", args: ["HEAD"]
 # Pacman-like syntax wrapper for many package managers.
@@ -196,8 +182,6 @@ cask "utm"
 cask "vesktop"
 # Wine wrapper built with SwiftUI
 cask "whisky"
-# Network protocol analyzer
-cask "wireshark-app"
 # Lossless audio decoder
 cask "thedavidweng/unsigned-tap/xld", trusted: true
 # Collect, organise, cite, and share research sources
@@ -225,6 +209,5 @@ mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
 go "github.com/air-verse/air"
 go "github.com/loov/goda"
-cargo "cargo-valgrind"
 cargo "dioxus-cli"
 cargo "kache"
