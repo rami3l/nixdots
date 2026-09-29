@@ -10,30 +10,20 @@ tap "nikitabobko/tap", trusted: true
 tap "rami3l/tap", trusted: true
 tap "syhily/git-gc", trusted: true
 tap "thedavidweng/unsigned-tap"
-# Zstandard is a real-time compression algorithm
-brew "zstd"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Secure and free password manager for all of your devices
-brew "bitwarden-cli"
 # Easily generate Instruments traces for your rust crate
 brew "cargo-instruments"
 # Distributed revision control system
 brew "git"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
 # Minimalist GNU for Windows and GCC cross-compilers
 brew "mingw-w64"
 # Sliding, tiling window manager for MacOS
 brew "paneru"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # Hook preloader
 brew "proxychains-ng"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # Makes Time Machine respect .gitignore files
 brew "iohannrabeson/tap/tmignore-rs", trusted: true
 # CLI tool to start Linux KVM or macOS HVF VMs using the libkrun

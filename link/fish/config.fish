@@ -129,12 +129,6 @@ if test $platform_os = darwin
     set -gx JAVA_HOME (/usr/libexec/java_home)
 end
 
-# pnpm
-if test $platform_os = darwin
-    set -gx PNPM_HOME $HOME/Library/pnpm
-    fish_add_path -gam $PNPM_HOME
-end
-
 # Launch Starship
 # See: <https://github.com/koekeishiya/yabai/issues/267#issuecomment-536159221>
 if status is-interactive

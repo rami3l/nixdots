@@ -8,8 +8,10 @@
     ./programs/gnupg.nix
     ./programs/go.nix
     ./programs/java.nix
+    ./programs/javascript.nix
     ./programs/nix.nix
     ./programs/nvim.nix
+    ./programs/python.nix
     ./programs/rust.nix
     ./programs/shell.nix
     ./programs/zig.nix
