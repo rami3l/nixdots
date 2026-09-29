@@ -187,5 +187,4 @@ mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
 go "github.com/air-verse/air"
 go "github.com/loov/goda"
-cargo "dioxus-cli"
 cargo "kache"

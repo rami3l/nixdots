@@ -9,6 +9,7 @@
     cargo-sweep
     cargo-watch
     # cargo-valgrind
+    dioxus-cli
     rust-bindgen
     rustup-unstable
   ];
