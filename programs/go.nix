@@ -3,8 +3,11 @@
   const,
   ...
 }: {
-  home.packages = [
-    pkgs.go
+  home.packages = with pkgs; [
+    go
+
+    air
+    goda
   ];
 
   programs.go = {
