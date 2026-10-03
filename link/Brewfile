@@ -1,10 +1,7 @@
 tap "brewforge/chinese", trusted: true
-tap "dmmulroy/tap"
-tap "gromgit/fuse", trusted: true
 tap "homebrew/services"
 tap "iohannrabeson/tap", "https://github.com/IohannRabeson/homebrew-tap"
 tap "laishulu/homebrew", trusted: true
-tap "libkrun/krun", "https://github.com/libkrun/homebrew-krun.git", trusted: true
 tap "louisbrunner/valgrind", trusted: true
 tap "nikitabobko/tap", trusted: true
 tap "rami3l/tap", trusted: true
@@ -26,16 +23,10 @@ brew "paneru"
 brew "proxychains-ng"
 # Makes Time Machine respect .gitignore files
 brew "iohannrabeson/tap/tmignore-rs", trusted: true
-# CLI tool to start Linux KVM or macOS HVF VMs using the libkrun
-brew "libkrun/krun/krunkit"
 # An input source switching daemon for macOS.
 brew "rami3l/tap/clavy", args: ["HEAD"]
 # Pacman-like syntax wrapper for many package managers.
 brew "rami3l/tap/pacaptr", args: ["HEAD"]
-# Yet another tcping.
-brew "rami3l/tap/ting"
-# AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
 # Android SDK component
 cask "android-platform-tools"
 # Display management tool
@@ -128,8 +119,6 @@ cask "mountain-duck"
 cask "mounty"
 # Free and open-source RSS reader
 cask "netnewswire"
-# Open-source software for live streaming and screen recording
-cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Verify system files structure, run miscellaneous maintenance and more
