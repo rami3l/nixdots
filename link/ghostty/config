@@ -11,12 +11,18 @@ adjust-cursor-thickness = "140%"
 font-thicken = true
 font-thicken-strength = 112
 
-font-family = "UDEV Gothic NFLG"
-font-size = 15
+font-family = "Cascadia Code PL"
+font-size = 14
+font-feature = "+ss01,+ss19,+ss20"
+adjust-cell-width = "-5%"
 
 # font-family = "Iosevka Term"
 # font-feature = "+ss05"
 # font-size = 15
+
+# font-family = "Input Mono Narrow"
+# font-size = 14
+# adjust-cell-width = "-10%"
 
 # Fallback for NF Symbols
 font-family = "Symbols Nerd Font"
