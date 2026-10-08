@@ -25,6 +25,7 @@
   ];
   xdgCfgFiles = map linkFile (
     [
+      "fish/_config.fish"
       "fish/conf.d/nix.fish"
       "fish/functions/fish_hybrid_key_bindings.fish"
       "fish/functions/yy.fish"

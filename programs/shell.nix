@@ -12,7 +12,7 @@ in {
 
   programs.fish = {
     enable = true;
-    shellInit = builtins.readFile ../link/fish/config.fish;
+    shellInit = "source (status dirname)/_config.fish";
     plugins = let
       mkPlugin = name: {
         inherit name;
