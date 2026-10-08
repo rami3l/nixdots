@@ -33,6 +33,8 @@ cask "android-platform-tools"
 cask "betterdisplay"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
+# Rule based proxy base on Clash
+cask "brewforge/chinese/clashx-meta"
 # Server and cloud storage browser
 cask "cyberduck"
 # Advanced Dock preferences
@@ -137,6 +139,8 @@ cask "thedavidweng/unsigned-tap/qbittorrent", trusted: true
 cask "rapidapi"
 # Tool to format memory cards complying with the SD File System spec
 cask "sdformatter"
+# System monitor for the menu bar
+cask "stats"
 # Video game digital distribution service
 cask "steam"
 # Replacement for RCDefaultApps, written in Swift
@@ -161,7 +165,6 @@ mas "Bitwarden", id: 1352778147
 mas "CrystalFetch", id: 6454431289
 mas "DaisyDisk", id: 411643860
 mas "Goodnotes", id: 1444383602
-mas "iStat Menus", id: 1319778037
 mas "Mactracker", id: 430255202
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
