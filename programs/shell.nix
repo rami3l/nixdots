@@ -16,7 +16,7 @@ in {
     plugins = let
       mkPlugin = name: {
         inherit name;
-        src = pkgs.fishPlugins.${name}.src;
+        inherit (pkgs.fishPlugins.${name}) src;
       };
     in
       map mkPlugin ["bass" "done" "fzf-fish"];

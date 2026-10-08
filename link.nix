@@ -14,50 +14,55 @@
   # the Nix store, which will make the feedback loop much slower and prone to
   # GC-caused breakage.
   symlinkRoot = "${const.homeDirectory}/.config/nixdots/link";
-  link = name: mkOutOfStoreSymlink "${symlinkRoot}/${name}";
 
-  linkFile = name: {${name}.source = link name;};
-  homeCfgFiles = map linkFile [
-    ".ssh/config"
-    ".gitignore"
-    ".haskeline"
-    ".proxychains/proxychains.conf"
-  ];
-  xdgCfgFiles = map linkFile (
-    [
-      "fish/_config.fish"
-      "fish/conf.d/nix.fish"
-      "fish/functions/fish_hybrid_key_bindings.fish"
-      "fish/functions/yy.fish"
-      "jj/config.toml"
-      "starship.toml"
-    ]
-    ++ optionals stdenv.hostPlatform.isDarwin [
-      "Brewfile"
-      "karabiner/karabiner.json"
-    ]
-  );
-
-  linkDir = name: {
-    ${name} = {
-      source = link name;
-      recursive = true;
+  link = {
+    files ? [],
+    dirs ? [],
+  }: let
+    link = name: mkOutOfStoreSymlink "${symlinkRoot}/${name}";
+    linkFile = name: {${name}.source = link name;};
+    linkDir = name: {
+      ${name} = {
+        source = link name;
+        recursive = true;
+      };
     };
-  };
-  homeCfgDirs = map linkDir [];
-  xdgCfgDirs = map linkDir (
-    [
-      "bat"
-      "ghostty"
-      "git"
-      "jjui"
-      "zellij"
-    ]
-    ++ optionals stdenv.hostPlatform.isDarwin [
-      "paneru"
-    ]
-  );
+  in
+    mergeAttrsList (map linkFile files ++ map linkDir dirs);
 in {
-  home.file = mergeAttrsList (homeCfgFiles ++ homeCfgDirs);
-  xdg.configFile = mergeAttrsList (xdgCfgFiles ++ xdgCfgDirs);
+  home.file = link {
+    files = [
+      ".ssh/config"
+      ".gitignore"
+      ".haskeline"
+      ".proxychains/proxychains.conf"
+    ];
+  };
+
+  xdg.configFile = link {
+    files =
+      [
+        "fish/_config.fish"
+        "fish/conf.d/nix.fish"
+        "fish/functions/fish_hybrid_key_bindings.fish"
+        "fish/functions/yy.fish"
+        "jj/config.toml"
+        "starship.toml"
+      ]
+      ++ optionals stdenv.hostPlatform.isDarwin [
+        "Brewfile"
+        "karabiner/karabiner.json"
+      ];
+    dirs =
+      [
+        "bat"
+        "ghostty"
+        "git"
+        "jjui"
+        "zellij"
+      ]
+      ++ optionals stdenv.hostPlatform.isDarwin [
+        "paneru"
+      ];
+  };
 }
