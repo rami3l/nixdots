@@ -8,6 +8,7 @@
     cargo-release
     cargo-sweep
     cargo-watch
+    cmake
     # cargo-valgrind
     dioxus-cli
     rust-bindgen
