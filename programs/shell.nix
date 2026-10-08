@@ -29,6 +29,7 @@ in {
       ast-grep
       bandwhich
       bat
+      cmake
       curl
       dust
       entr
