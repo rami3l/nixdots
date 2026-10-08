@@ -43,7 +43,6 @@ if status is-interactive
     alias docker podman
     abbr -g du dust
     abbr -g e '$EDITOR'
-    abbr -g gitui lazygit
     abbr -g la eza -a
     abbr -g less bat
     abbr -g ll eza -lah

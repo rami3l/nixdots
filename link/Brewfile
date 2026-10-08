@@ -11,8 +11,6 @@ tap "thedavidweng/unsigned-tap"
 brew "cargo-instruments"
 # Distributed revision control system
 brew "git"
-# Simple terminal UI for git commands
-brew "lazygit"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
 # Minimalist GNU for Windows and GCC cross-compilers
