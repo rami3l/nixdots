@@ -4,6 +4,7 @@
     ./programs/erlang.nix
     ./programs/docker.nix
     ./programs/fastfetch.nix
+    ./programs/font.nix
     ./programs/git.nix
     ./programs/gnupg.nix
     ./programs/go.nix
@@ -26,6 +27,7 @@
     automatic = true;
     options = "--delete-older-than 30d";
   };
+  nixpkgs.config.allowUnfree = true;
 
   programs.home-manager.enable = true;
 }
