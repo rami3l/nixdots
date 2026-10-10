@@ -1,5 +1,8 @@
 # See also <https://github.com/idursun/jjui/blob/main/internal/config/default/bindings.toml>.
 
+[bookmark]
+interactive_bookmark_pane = true
+
 [ui.theme]
 light = "base16-rose-pine-dawn"
 dark = "base24-ayu-mirage"
