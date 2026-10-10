@@ -32,8 +32,6 @@
 
     formulae = [
       "cargo-instruments"
-      "git"
-      "zstd"
       "mingw-w64"
       "paneru"
       "proxychains-ng"
