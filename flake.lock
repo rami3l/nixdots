@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790989254,
-        "narHash": "sha256-ZN+riaeFuE+DZ5zfqJiXlM12jLwZzeIXiNkU1YeHMXI=",
+        "lastModified": 1791600313,
+        "narHash": "sha256-/2gb2WTztITD/JU1XUCg63vDsIfJGLr0LDsjSCTTJc8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "acd21c5a3420a9d5fd0ed06299b10828267ef9ba",
+        "rev": "427c74a88a93cc9f856c8bb99bf6b4a5187a6b33",
         "type": "github"
       },
       "original": {
@@ -22,11 +22,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1790981744,
-        "narHash": "sha256-sm6DclXJudZfP/pcDBQQsRqyMxBcQsuw+7yQr4rBBLE=",
+        "lastModified": 1791487292,
+        "narHash": "sha256-tqM7xDEsaeK1p6VvRygeZ9LkQRpUUkbRT02BHv6hnTM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "55ba7f49ef2962b42cbd126522b7df5f95037679",
+        "rev": "8edc0c72e3a38faf5434e40d1f19431125fe4b30",
         "type": "github"
       },
       "original": {
@@ -46,11 +46,11 @@
     "rustup-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1790936393,
-        "narHash": "sha256-7uBgGzU4b0eaDRU/iOUqzkGrXIBvqo97fgQbIfIzfLo=",
+        "lastModified": 1791569296,
+        "narHash": "sha256-wlbkJCa5wMFQsU5ktS/m/SmqwlhBhCvQ9g52NI4AkIc=",
         "owner": "rust-lang",
         "repo": "rustup",
-        "rev": "b46db5ea94c1024c7cd2e7133a7f9b2ec1927478",
+        "rev": "61271d00a979e8fcc13a366d9515f4bf69b88ac2",
         "type": "github"
       },
       "original": {
