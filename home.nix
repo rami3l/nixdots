@@ -8,6 +8,7 @@
     ./programs/git.nix
     ./programs/gnupg.nix
     ./programs/go.nix
+    ./programs/homebrew.nix
     ./programs/java.nix
     ./programs/javascript.nix
     ./programs/nix.nix
