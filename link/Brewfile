@@ -117,4 +117,3 @@ mas "TestFlight", id: 899247664
 mas "uBlock Origin Lite", id: 6745342698
 mas "Windows App", id: 1295203466
 mas "Xcode", id: 497799835
-cargo "kache"
