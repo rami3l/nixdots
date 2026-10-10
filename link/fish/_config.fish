@@ -27,7 +27,7 @@ end
 
 if test -n "$brew"
     # set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-    # eval ($brew shellenv)
+    eval ($brew shellenv)
     set -gx HOMEBREW_NO_ANALYTICS 1
     set -gx HOMEBREW_NO_AUTO_UPDATE 1
 end

@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   homebrew = {
     enable = pkgs.stdenv.hostPlatform.isDarwin;
+    enableShellIntegration = false;
 
     taps = [
       {
