@@ -27,10 +27,9 @@ end
 
 if test -n "$brew"
     # set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-    eval ($brew shellenv)
+    # eval ($brew shellenv)
     set -gx HOMEBREW_NO_ANALYTICS 1
     set -gx HOMEBREW_NO_AUTO_UPDATE 1
-    set -gx HOMEBREW_BUNDLE_FILE $HOME/.config/Brewfile
 end
 
 # Nix
@@ -116,7 +115,6 @@ fish_add_path -gam $HOME/.local/bin
 
 # Rust
 set -gx RUSTUP_AUTO_INSTALL 0
-test -n "$brew" && fish_add_path -gam (brew --prefix rustup)/libexec/bin
 fish_add_path -gam $HOME/.cargo/bin
 
 # Go

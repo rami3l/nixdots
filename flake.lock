@@ -20,6 +20,27 @@
         "type": "github"
       }
     },
+    "homebrew": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791638467,
+        "narHash": "sha256-0PVvoT3Ysv+0FVQQgy8N5vLbMiXB8cFyYGlGU6In9v0=",
+        "owner": "rami3l",
+        "repo": "home-manager-brew",
+        "rev": "8966a42bd22fba5c57ff08b1ccddf2424bed93e8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rami3l",
+        "ref": "dev",
+        "repo": "home-manager-brew",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1791487292,
@@ -39,6 +60,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "homebrew": "homebrew",
         "nixpkgs": "nixpkgs",
         "rustup-src": "rustup-src"
       }

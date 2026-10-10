@@ -6,6 +6,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    homebrew = {
+      url = "github:rami3l/home-manager-brew/dev";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     rustup-src = {
       url = "github:rust-lang/rustup";
@@ -15,6 +19,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    homebrew,
     rustup-src,
     ...
   }: let
@@ -33,7 +38,10 @@
       home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        modules = [./home.nix];
+        modules = [
+          homebrew.homeManagerModules.default
+          ./home.nix
+        ];
         extraSpecialArgs = {inherit const;};
       };
   in {

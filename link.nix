@@ -50,7 +50,6 @@ in {
         "starship.toml"
       ]
       ++ optionals stdenv.hostPlatform.isDarwin [
-        "Brewfile"
         "karabiner/karabiner.json"
       ];
     dirs =
