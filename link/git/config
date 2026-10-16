@@ -21,6 +21,3 @@
 [credential]
   helper = osxkeychain
   helper = oauth
-[delta]
-  syntax-theme = base16-256
-  keep-plus-minus-markers = true

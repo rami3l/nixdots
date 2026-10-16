@@ -4,7 +4,7 @@
     jujutsu
 
     bfg-repo-cleaner
-    delta
+    difftastic
     gh
     git-absorb
     git-credential-oauth
