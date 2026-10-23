@@ -7,7 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     homebrew = {
-      url = "github:rami3l/home-manager-brew/dev";
+      url = "github:koalalorenzo/home-manager-brew";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
