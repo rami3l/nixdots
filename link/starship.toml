@@ -1,5 +1,22 @@
-# Print a new line at the start of the prompt
+# Prints a newline at the start of the prompt
 add_newline = false
+
+# See <https://starship.rs/config/#default-prompt-format> for more info.
+format = """
+$all\
+$vcs\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$container\
+$netns\
+$os\
+$shell\
+$character\
+"""
 
 [username]
 format = "[$user]($style) "
@@ -54,17 +71,8 @@ when = 'test -n "$FISH_PRIVATE_MODE"'
 symbol = "privately "
 style = "italic purple"
 
-# [custom.jj]
-# when = "jj-starship detect"
-# shell = ["jj-starship"]
-# format = "[$output]($style) "
-
-[custom.jj]
-symbol = " "
-when = "jj-starship detect"
-style = "bold purple"
-format = "on [$symbol$output]($style) "
-shell = ["jj-starship", "--no-color", "--no-jj-prefix", "--no-git-prefix"]
+[vcs]
+order = ["jj", "git", "hg", "pijul", "fossil"]
 
 [git_branch]
 disabled = true
