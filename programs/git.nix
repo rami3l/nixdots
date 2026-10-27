@@ -9,7 +9,6 @@
     git-absorb
     git-credential-oauth
     gitu
-    jj-starship
     jjui
     mergiraf
     tea
