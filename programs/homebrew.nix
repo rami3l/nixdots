@@ -83,6 +83,7 @@
       "vesktop"
       "whisky"
       "thedavidweng/unsigned-tap/xld"
+      "zen"
       "zotero"
     ];
 
