@@ -1,6 +1,18 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: let
+  inherit (pkgs) stdenv;
+in {
+  # Linux
+  programs = lib.mkIf stdenv.hostPlatform.isLinux {
+    ghostty.enable = true;
+  };
+
+  # macOS
   homebrew = {
-    enable = pkgs.stdenv.hostPlatform.isDarwin;
+    enable = stdenv.hostPlatform.isDarwin;
     enableShellIntegration = false;
 
     taps = [
