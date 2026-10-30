@@ -1,14 +1,14 @@
 {const, ...}: {
   imports = [
     ./link.nix
-    ./programs/erlang.nix
+    ./programs/bundle.nix
     ./programs/docker.nix
+    ./programs/erlang.nix
     ./programs/fastfetch.nix
     ./programs/font.nix
     ./programs/git.nix
     ./programs/gnupg.nix
     ./programs/go.nix
-    ./programs/homebrew.nix
     ./programs/java.nix
     ./programs/javascript.nix
     ./programs/nix.nix
