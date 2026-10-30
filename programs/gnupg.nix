@@ -1,14 +1,16 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   inherit (pkgs) stdenv;
 in {
   programs.gpg.enable = true;
 
   services.gpg-agent = {
     enable = true;
-    pinentry.package = lib.mkIf stdenv.hostPlatform.isDarwin pkgs.pinentry_mac;
+
+    defaultCacheTtl = 7200;
+
+    pinentry.package =
+      if stdenv.hostPlatform.isDarwin
+      then pkgs.pinentry_mac
+      else pkgs.pinentry-gnome3;
   };
 }
