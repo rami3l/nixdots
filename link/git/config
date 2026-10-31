@@ -19,5 +19,6 @@
 [rerere]
   enabled = true
 [credential]
+  helper = libsecret
   helper = osxkeychain
   helper = oauth
