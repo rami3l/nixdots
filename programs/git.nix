@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    git
+    gitFull
     jujutsu
 
     bfg-repo-cleaner
