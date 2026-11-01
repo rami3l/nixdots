@@ -6,8 +6,8 @@ binds {
     // ─── noctalia-shell keybinds ───
     // https://docs.noctalia.dev/getting-started/keybinds/
 
-    Mod+F1                             { show-hotkey-overlay; }
-    Mod+Shift+Escape                   { show-hotkey-overlay; }
+    Mod+F1                              { show-hotkey-overlay; }
+    Mod+Shift+Escape                    { show-hotkey-overlay; }
 
     // ─── Applications ───
     Mod+F12                             hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
@@ -53,14 +53,14 @@ binds {
     Mod+Down                            { focus-window-down; }
     Mod+J                               { focus-window-down; }
 
-    Mod+Shift+Left                       { move-column-left; }
-    Mod+Shift+H                          { move-column-left; }
-    Mod+Shift+Right                      { move-column-right; }
-    Mod+Shift+L                          { move-column-right; }
-    Mod+Shift+UP                         { move-window-up; }
-    Mod+Shift+K                          { move-window-up; }
-    Mod+Shift+Down                       { move-window-down; }
-    Mod+Shift+J                          { move-window-down; }
+    Mod+Shift+Left                      { move-column-left; }
+    Mod+Shift+H                         { move-column-left; }
+    Mod+Shift+Right                     { move-column-right; }
+    Mod+Shift+L                         { move-column-right; }
+    Mod+Shift+UP                        { move-window-up; }
+    Mod+Shift+K                         { move-window-up; }
+    Mod+Shift+Down                      { move-window-down; }
+    Mod+Shift+J                         { move-window-down; }
 
     Mod+Home                            { focus-column-first; }
     Mod+I                               { focus-column-first; }
@@ -88,8 +88,8 @@ binds {
 
     Mod+BracketLeft                     { consume-or-expel-window-left; }
     Mod+BracketRight                    { consume-or-expel-window-right; }
-    Mod+Comma                           { consume-window-into-column; }
-    Mod+Period                          { expel-window-from-column; }
+    Mod+Minus                           { consume-window-into-column; }
+    Mod+Equal                           { expel-window-from-column; }
 
     Mod+R                               { switch-preset-column-width; }
     Mod+Ctrl+R                          { switch-preset-column-width-back; }
@@ -138,10 +138,10 @@ binds {
     Mod+Shift+X                         { expand-column-to-available-width; }
     Mod+C                               { center-column; }
     Mod+Shift+C                         { center-visible-columns; }
-    Mod+Minus                           { set-column-width "-10%"; }
-    Mod+Equal                           { set-column-width "+10%"; }
-    Mod+Ctrl+Minus                      { set-window-height "-10%"; }
-    Mod+Ctrl+Equal                      { set-window-height "+10%"; }
+    Mod+Comma                           { set-column-width "-10%"; }
+    Mod+Period                          { set-column-width "+10%"; }
+    Mod+Ctrl+Comma                      { set-window-height "-10%"; }
+    Mod+Ctrl+Period                     { set-window-height "+10%"; }
 
 
     // ─── Modes ───
@@ -152,9 +152,9 @@ binds {
     Mod+M                               { maximize-window-to-edges; }
 
     // ─── Screenshots ───
-    Ctrl+Shift+1                        { screenshot; }
-    Ctrl+Shift+2                        { screenshot-screen; }
-    Ctrl+Shift+3                        { screenshot-window; }
+    Mod+Ctrl+Shift+1                    { screenshot; }
+    Mod+Ctrl+Shift+2                    { screenshot-screen; }
+    Mod+Ctrl+Shift+3                    { screenshot-window; }
 
     // ─── Emergency Escape Key ───
     // Use this when a fullscreen app blocks your keybinds.
