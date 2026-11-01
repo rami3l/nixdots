@@ -49,6 +49,9 @@ in {
         "jj/config.toml"
         "starship.toml"
       ]
+      ++ optionals stdenv.hostPlatform.isLinux [
+        "noctalia/config.toml"
+      ]
       ++ optionals stdenv.hostPlatform.isDarwin [
         "karabiner/karabiner.json"
       ];
@@ -59,6 +62,9 @@ in {
         "git"
         "jjui"
         "zellij"
+      ]
+      ++ optionals stdenv.hostPlatform.isLinux [
+        "niri"
       ]
       ++ optionals stdenv.hostPlatform.isDarwin [
         "paneru"
