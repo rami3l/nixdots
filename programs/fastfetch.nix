@@ -8,7 +8,7 @@ _: {
         "separator"
         {
           type = "os";
-          format = "{3} {10} {12}";
+          format = "{pretty-name}{?codename} {codename}{?}{/codename} {version}{/} {arch}";
         }
         "host"
         "kernel"
@@ -18,23 +18,20 @@ _: {
         {
           type = "display";
           key = "Display";
-          format = "{4}x{5} @ {3}Hz";
+          format = "{scaled-width}x{scaled-height} @ {refresh-rate}Hz";
         }
         {
           type = "de";
-          format = "{2} {3}";
+          format = "{pretty-name} {version}";
         }
         "wm"
         "wmtheme"
-        {
-          type = "theme";
-          format = "{?1}{1}{?3} {3}{?} [Plasma], {?}{7}";
-        }
+        "theme"
         "icons"
         "terminal"
         {
           type = "terminalfont";
-          format = "{/2}{-}{/}{2}{?3} {3}{?}";
+          format = "{/name}{-}{/}{name}{?size} {size}{?}";
         }
         "cpu"
         {
@@ -43,7 +40,7 @@ _: {
         }
         {
           type = "memory";
-          format = "{/1}{-}{/}{/2}{-}{/}{} / {}";
+          format = "{/used}{-}{/}{/total}{-}{/}{} / {}";
         }
         "break"
         "colors"
