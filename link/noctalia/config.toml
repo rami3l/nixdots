@@ -1,0 +1,23 @@
+[bar.default]
+background_opacity = 0.75
+radius_top_left = 0
+radius_top_right = 0
+
+[battery]
+warning_threshold = 15
+
+[brightness]
+enable_ddcutil = true
+
+[location]
+auto_locate = true
+
+[shell]
+niri_overview_type_to_launch_enabled = true
+polkit_agent = true
+
+[theme]
+mode = "auto"
+source = "wallpaper"
+wallpaper_scheme = "soft"
+
