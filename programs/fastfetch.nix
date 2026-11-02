@@ -8,7 +8,7 @@ _: {
         "separator"
         {
           type = "os";
-          format = "{pretty-name}{?codename} {codename}{?}{/codename} {version}{/} {arch}";
+          format = "{pretty-name} {arch}";
         }
         "host"
         "kernel"
