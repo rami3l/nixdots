@@ -2,6 +2,7 @@
 enable_notification_sounds = false
 
 [bar.default]
+start = ["launcher", "workspaces"]
 background_opacity = 0.75
 radius_top_left = 0
 radius_top_right = 0
@@ -23,3 +24,10 @@ polkit_agent = true
 mode = "auto"
 source = "wallpaper"
 wallpaper_scheme = "soft"
+
+[widget.clock]
+format = "%a %b %e %H:%M"
+
+[widget.media]
+hide_when_no_media = true
+hide_when_idle = true
