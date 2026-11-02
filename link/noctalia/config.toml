@@ -1,3 +1,6 @@
+[audio]
+enable_notification_sounds = false
+
 [bar.default]
 background_opacity = 0.75
 radius_top_left = 0
@@ -20,4 +23,3 @@ polkit_agent = true
 mode = "auto"
 source = "wallpaper"
 wallpaper_scheme = "soft"
-
