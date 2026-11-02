@@ -6,6 +6,7 @@
     ./programs/erlang.nix
     ./programs/fastfetch.nix
     ./programs/font.nix
+    ./programs/ghostty.nix
     ./programs/git.nix
     ./programs/gnupg.nix
     ./programs/go.nix
