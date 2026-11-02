@@ -46,6 +46,7 @@ in {
         "fish/conf.d/nix.fish"
         "fish/functions/fish_hybrid_key_bindings.fish"
         "fish/functions/yy.fish"
+        "ghostty/config"
         "jj/config.toml"
         "starship.toml"
       ]
@@ -53,12 +54,13 @@ in {
         "noctalia/config.toml"
       ]
       ++ optionals stdenv.hostPlatform.isDarwin [
+        "ghostty/kitty.app.png"
         "karabiner/karabiner.json"
       ];
     dirs =
       [
         "bat"
-        "ghostty"
+        "ghostty/shaders"
         "git"
         "jjui"
         "zellij"
