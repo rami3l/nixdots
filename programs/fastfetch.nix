@@ -18,7 +18,7 @@ _: {
         {
           type = "display";
           key = "Display";
-          format = "{scaled-width}x{scaled-height} @ {refresh-rate}Hz";
+          format = "{scaled-width}x{scaled-height} ({scale-factor}x) @ {refresh-rate}Hz";
         }
         {
           type = "de";
