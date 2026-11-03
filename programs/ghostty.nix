@@ -6,18 +6,18 @@
   inherit (pkgs) stdenv;
 
   fontCfg = {
-    font-family = "Cascadia Code PL";
-    font-size = 14;
-    font-feature = "+ss01,+ss19,+ss20";
-    adjust-cell-width = "-5%";
-
-    # font-family = "Iosevka Term";
-    # font-feature = "+ss05";
-    # font-size = 15;
+    font-family = "Iosevka Term";
+    font-feature = "+ss05";
+    font-size = 15;
 
     # font-family = "Input Mono Narrow";
     # font-size = 14;
     # adjust-cell-width = "-10%";
+
+    # font-family = "Cascadia Code PL";
+    # font-size = 14;
+    # font-feature = "+ss01,+ss19,+ss20";
+    # adjust-cell-width = "-5%";
   };
 
   # NOTE: Formatting borrowed from `home-manager`'s Ghostty module.
@@ -40,7 +40,7 @@ in {
     in
       fontCfg
       // {
-        font-size = fontSizeFact * font-size;
+        font-size = builtins.toJSON (fontSizeFact * font-size);
         font-family = [
           font-family
           # Fallback for NF Symbols
