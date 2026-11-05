@@ -16,6 +16,9 @@ enable_ddcutil = true
 [location]
 auto_locate = true
 
+[nightlight]
+enabled = true
+
 [shell]
 niri_overview_type_to_launch_enabled = true
 polkit_agent = true
