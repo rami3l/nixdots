@@ -8,8 +8,8 @@ email = "rami3l@outlook.com"
 behavior = "own"
 backend = "gpg"
 
-[git]
-sign-on-push = true
+[revsets]
+git-sign-on-push = "~signed() & mine()"
 
 [ui]
 default-command = "log"
