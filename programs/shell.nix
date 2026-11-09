@@ -65,6 +65,9 @@ in {
       yt-dlp
       zellij
     ]
+    ++ optionals stdenv.hostPlatform.isLinux [
+      ifuse
+    ]
     ++ optionals stdenv.hostPlatform.isDarwin [
       coreutils-prefixed
       duti
