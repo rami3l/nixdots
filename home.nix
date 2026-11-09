@@ -1,4 +1,10 @@
-{const, ...}: {
+{
+  pkgs,
+  const,
+  ...
+}: let
+  inherit (pkgs) stdenv;
+in {
   imports = [
     ./link.nix
     ./programs/bundle.nix
@@ -32,4 +38,5 @@
   nixpkgs.config.allowUnfree = true;
 
   programs.home-manager.enable = true;
+  targets.genericLinux.enable = stdenv.hostPlatform.isLinux;
 }
