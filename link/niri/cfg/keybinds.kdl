@@ -86,10 +86,8 @@ binds {
     Mod+Shift+Ctrl+Down                 { move-column-to-monitor-down; }
     Mod+Shift+F                         { switch-focus-between-floating-and-tiling; }
 
-    Mod+BracketLeft                     { consume-or-expel-window-left; }
-    Mod+BracketRight                    { consume-or-expel-window-right; }
-    Mod+Minus                           { consume-window-into-column; }
-    Mod+Equal                           { expel-window-from-column; }
+    Mod+Minus                           { consume-or-expel-window-left; }
+    Mod+Equal                           { consume-or-expel-window-right; }
 
     Mod+R                               { switch-preset-column-width; }
     Mod+Ctrl+R                          { switch-preset-column-width-back; }
@@ -98,10 +96,14 @@ binds {
 
 
     // ─── Workspace Switching ───
-    Mod+Ctrl+WheelScrollDown            cooldown-ms=150 { focus-workspace-down; }
+    Mod+BracketLeft                     cooldown-ms=150 { focus-workspace-up; }
+    Mod+BracketRight                    cooldown-ms=150 { focus-workspace-down; }
+    Mod+Shift+BracketLeft               cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+Shift+BracketRight              cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp              cooldown-ms=150 { focus-workspace-up; }
-    Mod+Ctrl+Shift+WheelScrollDown      cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollDown            cooldown-ms=150 { focus-workspace-down; }
     Mod+Ctrl+Shift+WheelScrollUp        cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+Ctrl+Shift+WheelScrollDown      cooldown-ms=150 { move-column-to-workspace-down; }
 
     Mod+WheelScrollRight                { focus-column-right; }
     Mod+WheelScrollDown                 { focus-column-right; }
