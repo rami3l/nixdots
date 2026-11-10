@@ -11,6 +11,10 @@ in {
     noctalia.enable = true;
   };
 
+  home.packages = lib.mkIf stdenv.hostPlatform.isLinux (with pkgs; [
+    quodlibet-full
+  ]);
+
   # macOS
   homebrew = {
     enable = stdenv.hostPlatform.isDarwin;
