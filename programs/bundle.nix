@@ -8,6 +8,7 @@ in {
   # Linux
   programs = lib.mkIf stdenv.hostPlatform.isLinux {
     ghostty.enable = true;
+    noctalia.enable = true;
   };
 
   # macOS
