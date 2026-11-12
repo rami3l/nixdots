@@ -66,6 +66,7 @@ in {
         "zellij"
       ]
       ++ optionals stdenv.hostPlatform.isLinux [
+        "fcitx5"
         "niri"
       ]
       ++ optionals stdenv.hostPlatform.isDarwin [
