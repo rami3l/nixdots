@@ -65,6 +65,7 @@ in {
     ];
 
     casks = [
+      "affinity"
       "android-platform-tools"
       "betterdisplay"
       "bettertouchtool"
@@ -108,14 +109,6 @@ in {
       {
         name = "Accelerate";
         id = 1459809092;
-      }
-      {
-        name = "Affinity Designer 2";
-        id = 1616831348;
-      }
-      {
-        name = "Affinity Photo 2";
-        id = 1616822987;
       }
       {
         name = "Amphetamine";
