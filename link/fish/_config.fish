@@ -34,6 +34,7 @@ end
 
 # Nix
 fish_add_path -gm $HOME/.nix-profile/bin
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.fish
 
 # Abbreviations and aliases
 if status is-interactive
@@ -120,11 +121,6 @@ fish_add_path -gam $HOME/.cargo/bin
 # Go
 set -gx GOPATH $HOME/.go
 fish_add_path -gam $GOPATH/bin
-
-# Java
-if test $platform_os = darwin
-    set -gx JAVA_HOME (/usr/libexec/java_home)
-end
 
 # Launch Starship
 # See: <https://github.com/koekeishiya/yabai/issues/267#issuecomment-536159221>
