@@ -34,7 +34,14 @@
     udev-gothic-nf
 
     ## Google fonts
-    (google-fonts.override {fonts = ["MPLUSCodeLatin" "OxygenMono"];})
+    (google-fonts.override {
+      fonts = [
+        "AlfaSlabOne"
+        "MPLUSCodeLatin"
+        "OxygenMono"
+        "RubikMonoOne"
+      ];
+    })
 
     # Text
     barlow
