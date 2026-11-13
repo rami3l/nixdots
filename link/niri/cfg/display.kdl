@@ -7,3 +7,8 @@
     mode "2560x1440@359.979" // Set resolution and refresh rate
     scale 1 // No scaling (use 2 for HiDPI)
 }
+
+output "PNP(BNQ) BenQ EW3270U A7K01314019" {
+    mode "3840x2160@60.000"
+    scale 1.5
+}
