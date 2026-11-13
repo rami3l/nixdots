@@ -67,6 +67,7 @@ in {
     ]
     ++ optionals stdenv.hostPlatform.isLinux [
       ifuse
+      pacaptr
     ]
     ++ optionals stdenv.hostPlatform.isDarwin [
       coreutils-prefixed
