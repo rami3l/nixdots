@@ -61,7 +61,24 @@
         "home-manager": "home-manager",
         "homebrew": "homebrew",
         "nixpkgs": "nixpkgs",
+        "pacaptr-src": "pacaptr-src",
         "rustup-src": "rustup-src"
+      }
+    },
+    "pacaptr-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793684912,
+        "narHash": "sha256-MaL1TTlfrK+FtDsrIIC1uYVKVPps0A/oNXeliRfkcV0=",
+        "owner": "rami3l",
+        "repo": "pacaptr",
+        "rev": "7e5122f126563b992c52e3aacf921868bf4ecb6a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rami3l",
+        "repo": "pacaptr",
+        "type": "github"
       }
     },
     "rustup-src": {
