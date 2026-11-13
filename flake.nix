@@ -32,6 +32,7 @@
       const = {inherit username homeDirectory;};
 
       pkgs = nixpkgs.legacyPackages.${system}.extend (final: _prev: {
+        pacaptr = final.callPackage ./pkgs/pacaptr {};
         rustup-unstable = final.callPackage ./pkgs/rustup-unstable {inherit rustup-src;};
       });
     in
