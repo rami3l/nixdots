@@ -58,10 +58,6 @@ in {
         name = "rami3l/tap/clavy";
         args = ["HEAD"];
       }
-      {
-        name = "rami3l/tap/pacaptr";
-        args = ["HEAD"];
-      }
     ];
 
     casks = [

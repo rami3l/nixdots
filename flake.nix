@@ -11,6 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    pacaptr-src = {
+      url = "github:rami3l/pacaptr";
+      flake = false;
+    };
     rustup-src = {
       url = "github:rust-lang/rustup";
       flake = false;
@@ -20,6 +24,7 @@
     nixpkgs,
     home-manager,
     homebrew,
+    pacaptr-src,
     rustup-src,
     ...
   }: let
@@ -32,6 +37,7 @@
       const = {inherit username homeDirectory;};
 
       pkgs = nixpkgs.legacyPackages.${system}.extend (final: _prev: {
+        pacaptr-unstable = final.callPackage ./pkgs/pacaptr-unstable {inherit pacaptr-src;};
         rustup-unstable = final.callPackage ./pkgs/rustup-unstable {inherit rustup-src;};
       });
     in

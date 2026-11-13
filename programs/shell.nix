@@ -47,6 +47,7 @@ in {
       nmap
       onefetch
       ouch
+      pacaptr-unstable
       parallel
       resvg
       ripgrep
