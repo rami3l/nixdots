@@ -19,6 +19,10 @@ rustPlatform.buildRustPackage {
   ];
 
   nativeBuildInputs = [pkgs.pkg-config];
+  buildInputs = with pkgs; [
+    aws-lc
+    zstd
+  ];
 
   postInstall = ''
     pushd $out/bin
