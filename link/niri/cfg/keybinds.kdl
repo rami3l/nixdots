@@ -10,7 +10,7 @@ binds {
     Mod+Shift+Escape                    { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Mod+F12                             hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    Mod+Apostrophe                      hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+B                               hotkey-overlay-title="Open Browser" { spawn-sh "gtk-launch $(xdg-settings get default-web-browser)"; }
 
     // --- Noctalia ---
