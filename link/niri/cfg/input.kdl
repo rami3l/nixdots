@@ -19,7 +19,7 @@ input {
     }
 
     mouse {
-        accel-speed -1.0
+        accel-speed -0.9
     }
 
     focus-follows-mouse // Automatically focus windows under the mouse pointer
