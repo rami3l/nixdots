@@ -12,6 +12,7 @@ in {
   };
 
   home.packages = lib.mkIf stdenv.hostPlatform.isLinux (with pkgs; [
+    evolutionWithPlugins
     quodlibet-full
   ]);
 
