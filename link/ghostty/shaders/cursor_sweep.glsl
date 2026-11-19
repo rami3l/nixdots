@@ -98,6 +98,9 @@ vec2 getRectangleCenter(vec4 rectangle) {
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 #if !defined(WEB)
   fragColor = texture(iChannel0, fragCoord.xy / iResolution.xy);
+
+  // Skip the animation when the terminal is unfocused.
+  if (iFocus == 0) return;
 #endif
 
   // normalization & setup(-1, 1 coords)
