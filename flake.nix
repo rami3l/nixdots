@@ -11,6 +11,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     pacaptr-src = {
       url = "github:rami3l/pacaptr";
       flake = false;
@@ -24,6 +25,7 @@
     nixpkgs,
     home-manager,
     homebrew,
+    neovim-nightly-overlay,
     pacaptr-src,
     rustup-src,
     ...
@@ -37,6 +39,7 @@
       const = {inherit username homeDirectory;};
 
       pkgs = nixpkgs.legacyPackages.${system}.extend (final: _prev: {
+        neovim-nightly = neovim-nightly-overlay.packages.${system}.default;
         pacaptr-unstable = final.callPackage ./pkgs/pacaptr-unstable {inherit pacaptr-src;};
         rustup-unstable = final.callPackage ./pkgs/rustup-unstable {inherit rustup-src;};
       });
