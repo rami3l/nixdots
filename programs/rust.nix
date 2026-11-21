@@ -10,7 +10,6 @@
     cargo-watch
     cmake
     # cargo-valgrind
-    dioxus-cli
     kache
     rust-bindgen
     rustup-unstable
