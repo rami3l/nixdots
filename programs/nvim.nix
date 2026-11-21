@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    neovim
+    neovim-nightly
     neovim-remote
 
     tree-sitter
