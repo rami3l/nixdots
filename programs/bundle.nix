@@ -85,6 +85,7 @@ in {
       "mountain-duck"
       "mounty"
       "netnewswire"
+      "notunes"
       "obsidian"
       "onyx"
       "openmtp"
