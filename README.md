@@ -16,12 +16,6 @@ After that, run the following command to bootstrap the build (replace
 > nix run home-manager -- switch --flake .#<profile>
 ```
 
-Once bootstrapped, the `home-manager` command can then be run directly like so:
-
-```console
-> home-manager switch --flake .#<profile>
-```
-
 ## Enable GPU Acceleration
 
 With `targets.genericLinux.enable = true`, [there should be a warning][warning]
