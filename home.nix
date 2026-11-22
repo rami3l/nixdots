@@ -17,6 +17,7 @@ in {
     ./programs/gnupg.nix
     ./programs/go.nix
     ./programs/i18n.nix
+    ./programs/ios.nix
     ./programs/java.nix
     ./programs/javascript.nix
     ./programs/nix.nix

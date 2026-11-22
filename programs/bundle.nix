@@ -13,6 +13,9 @@ in {
 
   home.packages = lib.mkIf stdenv.hostPlatform.isLinux (with pkgs; [
     evolutionWithPlugins
+
+    # HACK: On macOS we still need to install quodlibet v4.7 from GitHub CI.
+    # Switch to homebrew/nixpkgs once its available in any of these.
     quodlibet-full
   ]);
 
@@ -76,6 +79,7 @@ in {
       "karabiner-elements"
       "keka"
       "kodi"
+      "macfuse"
       "mos"
       "motrix"
       "mountain-duck"
