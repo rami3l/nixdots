@@ -17,4 +17,8 @@ in {
       ];
     };
   };
+
+  home.sessionVariables = lib.mkIf stdenv.hostPlatform.isLinux {
+    QT_IM_MODULES = "text-input-unstable-v3;wayland;fcitx";
+  };
 }
