@@ -12,6 +12,7 @@ in {
   };
 
   home.packages = lib.mkIf stdenv.hostPlatform.isLinux (with pkgs; [
+    bitwarden-desktop
     evolutionWithPlugins
 
     # HACK: On macOS we still need to install quodlibet v4.7 from GitHub CI.

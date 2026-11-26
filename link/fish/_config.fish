@@ -104,8 +104,11 @@ set -gx EDITOR nvim
 fish_add_path -gam $HOME/.local/share/nvim/mason/bin
 
 # Bitwarden SSH Agent
-if test $platform_os = darwin
-    set -gx SSH_AUTH_SOCK $HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+switch $platform_os
+    case linux
+        set -gx SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock
+    case darwin
+        set -gx SSH_AUTH_SOCK $HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
 end
 
 # Bat
