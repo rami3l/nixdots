@@ -67,6 +67,7 @@ in {
       zellij
     ]
     ++ optionals stdenv.hostPlatform.isLinux [
+      wl-clipboard
     ]
     ++ optionals stdenv.hostPlatform.isDarwin [
       coreutils-prefixed

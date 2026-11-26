@@ -52,6 +52,8 @@ if status is-interactive
     abbr -g nnn yazi
     abbr -g obliviate history clear-session
     type -q pacman || abbr -g pacman pacaptr
+    type -q pbcopy || abbr -g pbcopy wl-copy
+    type -q pbpaste || abbr -g pbpaste wl-paste
     abbr -g proxychains proxychains4
     abbr -g tcping ting
     abbr -g tmux zellij
